@@ -32,6 +32,8 @@ makeBlinkyDancer.prototype.step = function() {
 
 
 /*
+ORIGINAL CODE
+
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 

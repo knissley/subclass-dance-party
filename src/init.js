@@ -1,5 +1,7 @@
 // This file puts the dancer spans onto the DOM, by running the constructor and using Math.random() to randomize the top and left positions as well as the timeBetweenSteps variable
 
+// potential bug: dancer can appear on the header (constrict this in some way?)
+
 $(document).ready(function() {
   window.dancers = [];
 
