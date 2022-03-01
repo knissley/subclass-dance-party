@@ -1,3 +1,5 @@
+// This file puts the dancer spans onto the DOM, by running the constructor and using Math.random() to randomize the top and left positions as well as the timeBetweenSteps variable
+
 $(document).ready(function() {
   window.dancers = [];
 
@@ -15,12 +17,13 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
-    // console.log(this);
+
+    // grab the desired dancer constructor from the dancer-maker-function-name attribute on the button element
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); // makeBlinkyDancer
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    // console.log(dancerMakerFunction);
+
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),

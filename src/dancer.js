@@ -1,6 +1,9 @@
-// Creates and returns a new dancer object that can step
+//This file is the main dancer superclass
+//It contains the step function that sets up the stepping schedule for every dancer type
+//It sets the random position of any dancer that uses this constructor
+//It gives every dancer a DOM element (span w/ class of dancer) --- does this need to become a different class for other dancers?
 
-// need to add this in appropriate places
+
 var makeDancer = function(top, left, timeBetweenSteps) {
   //this = Object.create(makeDancer.prototype);
   // {} and make its prototype delegate to the passed in object
@@ -12,24 +15,18 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   // node will be the element itself
   this.$node = $('<span class="dancer"></span>');
 
-  // remove this method
+  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote:
 
   // start moving immediately
   this.step();
 
-  // also change this to pseudoclassical move out of constructor
-
-
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
+  // set the position to some random default point within the body
   this.setPosition(top, left);
 };
 
-// declare dancer.prototype
-// we could potentially put this function in the constructor
 
 makeDancer.prototype.step = function() {
-  // this sets up a schedule for all subsequent subclasses
+  // this sets up a schedule for all subsequent subclasses to follow
   var outside = this;
   setTimeout(function() {
     outside.step();
@@ -39,7 +36,6 @@ makeDancer.prototype.step = function() {
 makeDancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
-  //
   var styleSettings = {
     top: top,
     left: left
@@ -47,7 +43,6 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// this will be the superclass
 
 
 
