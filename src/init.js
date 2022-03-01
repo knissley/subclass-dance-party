@@ -3,7 +3,7 @@
 // potential bug: dancer can appear on the header (constrict this in some way?)
 
 $(document).ready(function() {
-  window.dancers = [];
+  window.dancers = []; //use this to access every dancer
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
