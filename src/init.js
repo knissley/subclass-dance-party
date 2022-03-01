@@ -32,7 +32,22 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+  // new event handler for lineup
+  //set a variable we can change, this will be used for the dancer's position
+  var newLeftPosition = 50;
+  $('.line-up').on('click', function(event) {
+    // when clicked
+    // iterate over dancers array
+    console.log('line-up is triggering');
+    window.dancers.forEach(function(currentDancer) {
+      currentDancer.setPosition(currentDancer.top, 50);
+    });
+    // set each dancer left property or top prop to same value
+  });
+
 });
 
