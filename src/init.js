@@ -42,7 +42,7 @@ $(document).ready(function() {
   $('.line-up').on('click', function(event) {
     // when clicked
     // iterate over dancers array
-    console.log('line-up is triggering');
+    // console.log('line-up is triggering');
     window.dancers.forEach(function(currentDancer) {
       currentDancer.setPosition(currentDancer.top, 50);
     });
