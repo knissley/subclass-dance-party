@@ -19,20 +19,25 @@ a:active{
 .addDancerButton,
 .line-up{
   padding:5px 12px;
-  float:right;
+  float: right;
+  display: inline-block;
+  background-color: #333;
+  border-radius: 5px;
+  margin: .3rem;
 }
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:40px;
+  background-color: #000;
 }
 .title{
-  background-color: #777;
+  background-color: rgb(57, 57, 57);
 }
 .dancer{
   /* border:10px solid red;
   border-radius:10px; */
   position:absolute;
-  height: 100px;
+  height: 150px;
+  width: 150px;
   aspect-ratio: 4/3;
 }
 /* .pop-dancer{
@@ -40,7 +45,7 @@ a:active{
 } */
 #popImg,
 #blinkyImg {
-  width: 100%;
+  height: 100%;
 }
 
 .line-up {
