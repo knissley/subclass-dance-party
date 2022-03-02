@@ -6,6 +6,12 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // call makeDancer but bind this to be this
   // this = object.create(makeBlinkyDancer.prototype)
   makeDancer.call(this, top, left, timeBetweenSteps);
+
+  //add blinky-dancer class to the jQuery element
+  this.$node.addClass('blinky-dancer');
+
+  //insert an <img> inside the jQuery element with a src of the_flash img
+  this.$node.prepend($('<img>', {id: 'blinkyImg', src: './assets/img/the_flash.png'}));
 };
 
 // refer back to and access superclass
