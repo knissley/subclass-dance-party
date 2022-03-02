@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(assets/img/dance_background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 18px;
   overflow: hidden;
 }
